@@ -29,10 +29,6 @@ public class Calculator {
         throw new UnsupportedOperationException();
     }
 
-    public int subtract(int firstOperand, int secondOperand) {
-        return firstOperand - secondOperand;
-    }
-
     /*
     public int subtract(int firstOperand, int secondOperand) {
         throw new UnsupportedOperationException();
