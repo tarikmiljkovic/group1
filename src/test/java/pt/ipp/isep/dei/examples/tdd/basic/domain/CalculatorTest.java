@@ -98,39 +98,171 @@ public class CalculatorTest {
 
     }
 
-    /*
+     //subtraction
     @Test
-    public void ensureThreeMinusZeroEqualThree(){
+    @DisplayName("ensure three minus two equals to one")
+    void ensureThreeMinusTwoEqualsToOne() {
+
         //Arrange
         int firstOperand = 3;
+        int secondOperand = 2;
+        int expectedResult = 1;
+
+
+        //Act
+        int result = new Calculator().subtract(firstOperand, secondOperand);
+
+        //Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    @DisplayName("ensure three minus minus three equals to six")
+    void ensureThreeMinusMinusThreeEqualsToSix() {
+
+        //Arrange
+        int firstOperand = 3;
+        int secondOperand = -3;
+        int expectedResult = 6;
+
+
+        //Act
+        int result = new Calculator().subtract(firstOperand, secondOperand);
+
+        //Assert
+        assertEquals(expectedResult, result);
+    }
+
+
+    //multiplication
+    @Test
+    @DisplayName("ensure Four Multiplied by two equals to eight")
+    void ensureFourMultipliedByTwoEqualsToEight() {
+
+        //arrange
+        int firstOperand = 4;
+        int secondOperand = 2;
+        int expectedResult = 8;
+
+        //Act
+        int result = new Calculator().multiply(firstOperand, secondOperand);
+
+        //Assert
+        assertEquals(expectedResult, result);
+
+    }
+
+    @Test
+    @DisplayName("ensure four multiplied by minus two equals to minus eight")
+    void ensureFourMultipliedByMinusTwoEqualsToMinusEight() {
+
+        //arrange
+        int firstOperand = 4;
+        int secondOperand = -2;
+        int expectedResult = -8;
+
+        //Act
+        int result = new Calculator().multiply(firstOperand, secondOperand);
+
+        //Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    @DisplayName("ensure minus four multiplied by minus two equals to eight")
+    void ensureMinusFourMultipliedByMinusTwoEqualsToEight() {
+
+        //arrange
+        int firstOperand = -4;
+        int secondOperand = -2;
+        int expectedResult = 8;
+
+        //Act
+        int result = new Calculator().multiply(firstOperand, secondOperand);
+
+        //Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    @DisplayName("ensure four multiplied by zero equals to zero")
+    void ensureFourMultipliedByZeroEqualsToZero() {
+
+        //arrange
+        int firstOperand = 4;
         int secondOperand = 0;
-        int expectedResult = 3;
-        //int result = -1;
+        int expectedResult = 0;
 
         //Act
-        int result = new Calculator().subtract(firstOperand, secondOperand);
+        int result = new Calculator().multiply(firstOperand, secondOperand);
 
         //Assert
         assertEquals(expectedResult, result);
+    }
 
+    //factorial
+    @Test
+    @DisplayName("ensure three factorial equals to six")
+    void ensureThreeFactorialEqualsToSix()
+    {
+        //arrange
+        int number = 3;
+        int expectedResult = 6;
+
+        //Act
+        int result = new Calculator().factorial(number);
+
+        //Assert
+        assertEquals(expectedResult, result);
     }
 
     @Test
-    public void ensureThreeMinusOneEqualTwo(){
-        //Arrange
-        int firstOperand = 3;
-        int secondOperand = 1;
-        int expectedResult = 2;
-        //int result = -1;
+    @DisplayName("ensure five factorial equals to one twenty")
+    void ensureFiveFactorialEqualsToOneTwenty() {
+
+        //arrange
+        int number = 5;
+        int expectedResult = 120;
 
         //Act
-        int result = new Calculator().subtract(firstOperand, secondOperand);
+        int result = new Calculator().factorial(number);
 
         //Assert
         assertEquals(expectedResult, result);
-
     }
-    */
+
+    @Test
+    @DisplayName("ensure zero factorial equals to one")
+    void ensureZeroFactorialEqualsToOne() {
+
+
+        //arrange
+        int number = 0;
+        int expectedResult = 1;
+
+        //Act
+        int result = new Calculator().factorial(number);
+
+        //Assert
+        assertEquals(expectedResult, result);
+    }
+    @Test
+    @DisplayName("ensure one factorial equals to one")
+    void ensureOneFactorialEqualsToOne() {
+
+
+        //arrange
+        int number = 1;
+        int expectedResult = 1;
+
+        //Act
+        int result = new Calculator().factorial(number);
+
+        //Assert
+        assertEquals(expectedResult, result);
+    }
+
+
 }
 
 
