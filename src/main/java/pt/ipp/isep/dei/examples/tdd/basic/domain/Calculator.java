@@ -21,17 +21,31 @@ public class Calculator {
         throw new UnsupportedOperationException();
     }
 
-    public int multiply(int dividend, int divisor) {
-        throw new UnsupportedOperationException();
+     public int multiply(int firstOperand, int secondOperand)
+    {
+        return Math.multiplyExact(firstOperand,secondOperand);
     }
 
-    public int factorial(int number) {
-        throw new UnsupportedOperationException();
+    public int factorial(int number)
+    {
+       if(number<0)
+       {
+         throw new ArithmeticException("Number must be equal to zero or greater than zero");
+       }
+       else if ((number == 0)||(number == 1)){
+
+           return 1;
+       }
+       else
+       {
+           return  number* factorial( number-1 );
+       }
+
     }
 
-    /*
-    public int subtract(int firstOperand, int secondOperand) {
-        throw new UnsupportedOperationException();
+
+    public int subtract(int firstOperand, int secondOperand)
+    {
+        return firstOperand - secondOperand;
     }
-    */
 }
