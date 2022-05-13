@@ -59,23 +59,25 @@ public class CalculatorTest {
         assertEquals(expectedResult, result);
     }
     @Test
-    public void ensureThreePlusTwoEqualsFive() {
+    public void ensureTwoPlusMinusTwoEqualsZero() {
 
         //HACK: for demonstration purposes only
         System.out.println("\t\tExecuting " + new Object() {
         }.getClass().getEnclosingMethod().getName() + " Test");
 
         // Arrange
-        int expectedResult = 5;
-        int firsOperand = 3;
-        int secondOperand = 2;
-        int result = 3;
+        int expectedResult = 0;
+        int firsOperand = 2;
+        int secondOperand = -2;
+        int result = 0;
 
         // Act
         result = new Calculator().sum(firsOperand, secondOperand);
 
         // Assert
         assertEquals(expectedResult, result);
+
+
     }
 
     @Test
@@ -126,6 +128,22 @@ public class CalculatorTest {
 
     }
 
+    @Test
+    public void ensureTwoPlusZeroEqualsTwo(){
+
+        //Arrange
+        int firstOperand = 2;
+        int secondOperand = 0;
+        int expectedResult = 2;
+        int result = 2;
+
+        // Act
+        result = new Calculator().sum(firstOperand,secondOperand);
+
+        // Assert
+        assertEquals(expectedResult,result);
+    }
+
      //subtraction
     @Test
     @DisplayName("ensure three minus two equals to one")
@@ -152,6 +170,7 @@ public class CalculatorTest {
         int firstOperand = 3;
         int secondOperand = -3;
         int expectedResult = 6;
+        int result = 6;
 
 
         //Act
@@ -159,6 +178,58 @@ public class CalculatorTest {
 
         //Assert
         assertEquals(expectedResult, result);
+    }
+
+    @Test
+    void ensureTwoDividedByTwoEqualsOne() {
+
+        //Arrange
+        int dividend = 2;
+        int divisor = 2;
+        int expectedResult = 1;
+        int result = 1;
+
+
+        //Act
+        int result = new Calculator().divide(dividend, divisor);
+
+        //Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    void ensureTwoDividedByMinusTwoEqualsMinusOne() {
+
+        //Arrange
+        int dividend = 2;
+        int divisor = -2;
+        int expectedResult = -1;
+        int result = -1;
+
+
+        //Act
+        int result = new Calculator().divide(dividend, divisor);
+
+        //Assert
+        assertEquals(expectedResult, result);
+    }
+
+
+
+    @Test
+    public void ensureTwoMinusZeroEqualsTwo(){
+
+        //Arrange
+        int firstOperand = 2;
+        int secondOperand = 0;
+        int expectedResult = 2;
+        int result = 2;
+
+        // Act
+        result = new Calculator().subtract(firstOperand,secondOperand);
+
+        // Assert
+        assertEquals(expectedResult,result);
     }
 
 
