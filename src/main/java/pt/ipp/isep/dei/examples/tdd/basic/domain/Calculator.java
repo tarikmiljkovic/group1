@@ -18,7 +18,14 @@ public class Calculator {
     }
 
     public int divide(int dividend, int divisor) {
-        return dividend / divisor;
+
+        if(dividend = 0){
+            throw new ArithmeticException("Dividend cant be 0");
+        }
+        else{
+            return dividend / divisor;
+        }
+
     }
 
      public int multiply(int firstOperand, int secondOperand)
