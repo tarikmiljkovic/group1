@@ -18,12 +18,12 @@ public class Calculator {
     }
 
     public int divide(int dividend, int divisor) {
-        throw new UnsupportedOperationException();
+        return dividend / divisor;
     }
 
      public int multiply(int firstOperand, int secondOperand)
     {
-        return Math.multiplyExact(firstOperand,secondOperand);
+        return firstOperand * secondOperand;
     }
 
     public int factorial(int number)
