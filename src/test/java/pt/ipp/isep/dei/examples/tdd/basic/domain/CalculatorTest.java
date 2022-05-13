@@ -50,6 +50,34 @@ public class CalculatorTest {
      * Act: sum both numbers (three and two).<p>
      * Assert: the result is five.
      */
+
+    @Test
+    public void sum(int first, int second){
+
+        result = new Calculator().sum(first, second);
+
+        assertEquals(expectedResult, result);
+    }
+    @Test
+    public void ensureThreePlusTwoEqualsFive() {
+
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int expectedResult = 5;
+        int firsOperand = 3;
+        int secondOperand = 2;
+        int result = 3;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
     @Test
     public void ensureThreePlusTwoEqualsFive() {
 
