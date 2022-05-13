@@ -207,6 +207,21 @@ public class CalculatorTest {
         //Assert
         assertEquals(expectedResult, result);
     }
+    @Test
+    void ensureZeroDividedByTwoEqualsZero() {
+
+        //Arrange
+        int dividend = 0;
+        int divisor = 2;
+        int expectedResult = 0;
+
+
+        //Act
+        int result = new Calculator().divide(dividend, divisor);
+
+        //Assert
+        assertEquals(expectedResult, result);
+    }
 
 
 
