@@ -19,7 +19,7 @@ public class Calculator {
 
     public int divide(int dividend, int divisor) {
 
-        if(dividend = 0){
+        if( dividend == 0){
             throw new ArithmeticException("Dividend cant be 0");
         }
         else{
