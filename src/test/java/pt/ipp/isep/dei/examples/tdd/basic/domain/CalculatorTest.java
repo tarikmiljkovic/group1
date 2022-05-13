@@ -51,13 +51,7 @@ public class CalculatorTest {
      * Assert: the result is five.
      */
 
-    @Test
-    public void sum(int first, int second){
 
-        result = new Calculator().sum(first, second);
-
-        assertEquals(expectedResult, result);
-    }
     @Test
     public void ensureTwoPlusMinusTwoEqualsZero() {
 
@@ -174,7 +168,7 @@ public class CalculatorTest {
 
 
         //Act
-        int result = new Calculator().subtract(firstOperand, secondOperand);
+         result = new Calculator().subtract(firstOperand, secondOperand);
 
         //Assert
         assertEquals(expectedResult, result);
@@ -191,7 +185,7 @@ public class CalculatorTest {
 
 
         //Act
-        int result = new Calculator().divide(dividend, divisor);
+         result = new Calculator().divide(dividend, divisor);
 
         //Assert
         assertEquals(expectedResult, result);
@@ -208,7 +202,7 @@ public class CalculatorTest {
 
 
         //Act
-        int result = new Calculator().divide(dividend, divisor);
+         result = new Calculator().divide(dividend, divisor);
 
         //Assert
         assertEquals(expectedResult, result);
